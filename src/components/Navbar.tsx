@@ -9,7 +9,10 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ onToggleTheme, isDarkMode }) => (
   <nav className="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary">
     <div className="container-fluid">
-      <NavLink className="navbar-brand fw-bold" to="/">United Supply Agency</NavLink>
+      <NavLink className="navbar-brand fw-bold" to="/">
+        <span className="d-block d-lg-none">USA</span>
+        <span className="d-none d-lg-block">United Supply Agency</span>
+      </NavLink>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
